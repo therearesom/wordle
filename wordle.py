@@ -4,14 +4,23 @@ def yellow(letter_u, sec_w_letters, no):
             return True
     return False
 
+##def secret_word(no):
+    
+
+##https://www.mit.edu/~ecprice/wordlist.10000
 
 print("Let's play wordle!")
+
 while True:
     try:
         no_of_letters = int(input("Enter how many letter word you want to guess: "))
+        if no_of_letters < 1 or no_of_letters > 13:
+            print("Pick a number from 1 to 13.")
+            continue
         break
     except ValueError:
         print("Enter a valid number!")
+
 
 secret_word = "night"
 secret_word_letters = list(secret_word)
