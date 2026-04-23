@@ -1,5 +1,4 @@
 def yellow(letter_u, sec_w_letters, no):
-##    print(sec_w_letters)
     for i in range(no):
         if sec_w_letters[i] == letter_u:
             return True
@@ -54,8 +53,3 @@ else:
     print(f"You won in {no_of_attempts} attempts!")
 
 print(f"The secret word was {secret_word}.")
-##    print(no_of_letters)
-##    print(human_input)
-##    print(human_input_letters)
-##    print(secret_word)
-##    print(secret_word_letters)
