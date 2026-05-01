@@ -1,13 +1,31 @@
+import random
+import pandas as pd
+
+excel_file = "Test.xlsx"
+df = pd.read_excel(excel_file)
+words = df["besede"]
+
 def yellow(letter_u, sec_w_letters, no):
     for i in range(no):
         if sec_w_letters[i] == letter_u:
             return True
     return False
 
-##def secret_word(no):
-    
+def secret_word_gen(no_of_letters):
+    return a[no_of_letters][random.randrange(1, len(a[no_of_letters]) + 1)]
 
-##https://www.mit.edu/~ecprice/wordlist.10000
+a = []
+for w in words:
+    try:
+        if (len(a) - 1) >= len(w):
+            a[len(w)].append(w)
+        else:
+            for i in range(len(w) - (len(a) - 1)):
+                a.append([])
+            a[len(w)].append(w)
+    except:
+        a[4].append("null")
+
 
 print("Let's play wordle!")
 
@@ -22,7 +40,7 @@ while True:
         print("Enter a valid number!")
 
 
-secret_word = "night"
+secret_word = secret_word_gen(no_of_letters)
 secret_word_letters = list(secret_word)
 game_result = False
 win = ["G" for i in range(no_of_letters)]
