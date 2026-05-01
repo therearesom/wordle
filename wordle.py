@@ -39,8 +39,6 @@ while True:
     except ValueError:
         print("Enter a valid number!")
 
-
-##secret_word = secret_word_gen(no_of_letters)
 secret_word_letters = list(secret_word_gen(no_of_letters))
 game_result = False
 win = ["G" for i in range(no_of_letters)]
