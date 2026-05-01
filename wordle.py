@@ -40,8 +40,8 @@ while True:
         print("Enter a valid number!")
 
 
-secret_word = secret_word_gen(no_of_letters)
-secret_word_letters = list(secret_word)
+##secret_word = secret_word_gen(no_of_letters)
+secret_word_letters = list(secret_word_gen(no_of_letters))
 game_result = False
 win = ["G" for i in range(no_of_letters)]
 no_of_attempts = 0
@@ -79,4 +79,4 @@ if game_result == False:
 else:
     print(f"You won in {no_of_attempts} attempts!")
 
-print(f"The secret word was {secret_word}.")
+print(f"The secret word was {secret_word_gen(no_of_letters)}.")
